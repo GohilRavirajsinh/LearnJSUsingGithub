@@ -34,3 +34,26 @@ console.log(typeof ValueInString);
 
 console.log(ValueInString);
 // 33 = "33"
+
+// ****************** Operations ****************** 
+
+// let value = 3
+// let negValue = -value
+// console.log(negValue);
+
+// let str1 = "GOKU"
+// let str2 = " Gaming"
+// let str3 = str1 + str2
+// console.log(str3);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2 ); // First string than all are string
+// console.log(1 + 2 + "2" ); // First num than all num are operate and string are still string
+
+// console.log(+true);
+// console.log(+false);
+
+let gameCounter = 100
+++gameCounter;
+console.log(gameCounter);
