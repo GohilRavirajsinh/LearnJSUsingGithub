@@ -32,3 +32,25 @@ let myInfo = {  // Store in variable
 const MyFunction = function(){  // Store in variable
     console.log("I am a Gamer!");
 }
+
+// +++++++++++++++++++++++ Memory in JS +++++++++++++++++++++++++++
+// Stack (Primitive)
+
+let myYoutube = "GokuPlayzZz"
+let anothername = myYoutube  
+anothername = "Maverick-Mindsett"
+
+console.log(myYoutube);    // GokuPlayzZz
+console.log(anothername);  // Maverick-Mindsett  // Here provide copy not original
+
+// Heap  (Non-Primitive)   
+let userRavi = {
+    email: "ravigaming@gmail.com",
+    rank: "Conqurer"
+}
+let userKartik = userRavi
+
+userKartik.email = "ravi@google.com"  // Original value Change Direct
+
+console.log(userRavi.email);    // ravi@google.com
+console.log(userKartik.email);  // ravi@google.com  // Here provide Reference
