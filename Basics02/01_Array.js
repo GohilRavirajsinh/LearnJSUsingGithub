@@ -14,14 +14,6 @@ console.log(Ary1);  // Add the value first place and other values are same copy 
 Ary1.shift()  // [ 'M416', 'AKM', 'SCAR-L', 'M762', 'AWM' ]
 console.log(Ary1);  // first num Left and other values are same copy for that particular ans
 
-const Ary2 = ["Goku", "Vageta", "Piccolo"]
-
-Ary3 = Ary1.concat(Ary2)
-console.log(Ary3);  // Print Combine Arrays
-
-Ary4 = new Array(...Ary1, ...Ary2)
-console.log(Ary4);  // Print Combine Arrays
-
 // const Array3 = ["M416", "AKM", "SCAR-L", "M762", "AWM"] // For join example
 const Array3 = [0, 1, 2, 3, 4, 5]
 
