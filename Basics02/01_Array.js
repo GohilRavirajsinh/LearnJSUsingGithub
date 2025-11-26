@@ -3,7 +3,7 @@ console.log(Ary1[1]);  // AKM
 
 //+++++++++Array Methods+++++++++//
 Ary1.push(6)  // add 6 
-console.log(Ary1);  // [ 'M416', 'AKM', 'SCAR-L', 'M762', 'AWM', 6 ]
+console.log(Ary1);  // [ 'M416', 'AKM', 'SCAR-L', 'M762', 'AWM', 6]
 
 Ary1.pop() // remove the last value
 console.log(Ary1);  // [ 'M416', 'AKM', 'SCAR-L', 'M762', 'AWM' ]
