@@ -1,0 +1,69 @@
+How Does javascript Execute?
+
+{} Globel Execution Context (this.)
+
+-> Globel Execution Context     --First
+-> Function Execution Context   --Second
+
+Its run in Two Phase...
+-> Memory Creation Phase
+-> Execution Phase
+
+Now Understand Using this Exa... ___________________________________
+                                |let val1 = 10                      |
+                                |let val2 = 5                       |
+                                |function addnum(num1, num2){       |
+                                |    let total = num1 + num2        |
+                                |    return total                   |
+                                |}                                  |
+                                |let result1 = addnum(val1, val2)   |
+                                |let result2 = addnum(10, 2)        |
+                                |___________________________________|
+
+Step 1 -> Globel Execution
+            |               
+          this.  (Allocate First this.)
+
+Step 2 -> Enter in Phases
+        1st Memory Phase / Creation Phase
+             # Store all the variables
+            -> val1 => in variable (undefined)
+            -> val2 => in variable (undefined)
+            -> addnum => in function (defination)
+            -> result1 => undefined
+            -> result2 => undefined
+        #Memory Creation Phase Completed
+                    |^| 
+This Cycle Execute All the time in First
+
+Step 3 -> Process in Phases
+        2nd Execution Phase
+            -> val1 => 10
+            -> val2 => 5     ______________
+            -> addnum ====> | New Variable |<===== The More Time Function Executes, then the More Boxes Created!    
+                            |  Environment |
+                            |       +      |<-- BoxCalled New Execution Context Create/Process For (addnum Function)
+                            |  Execution   |
+                            |_____Thread___|Now, in box the Two Steps Run Again -> Memory Creation Phase
+                                                                                -> Execution Phase
+                            1st Memory Phase / Creation Phase
+                                 # Store variables
+                                -> val1 => undefined
+                                -> val2 => undefined
+                                -> total => undefined
+                            2nd Execution Phase
+                                -> num1 => 10
+                                -> num2 => 5
+                                -> total => 15 (Now the total is return to Globel Execution Context)
+                            # After Completing the New Executional Context are Delete Automatically and then contineu..
+            -> result1 => 15
+            -> result2 => #Enter in Box Again and run Two Steps Again
+                            1st Memory Phase
+                                 # Store variables
+                                -> val1 => undefined
+                                -> val2 => undefined
+                                -> total => undefined
+                            2nd Execution Phase
+                                -> num1 => 10
+                                -> num2 => 2
+                                -> total => 12 (Now Again Delete This Process Here) [result2 =>  12]
