@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Dom,Learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on Chai aur code <span style="display: none;"> Test text</span></h1>
+        <!-- 
+        const tit = document.getElementByID('title')
+        tit.innerText
+        'DOM Learning on Chai aur code' // exact see what in page show
+        tit.textContent
+        'DOM Learning on Chai aur code Test text' // hidden also show (span)
+        tit.innerHTML
+        'DOM Learning on Chai aur code <span style="display: none;"> Test text</span>' // All code show with attribute -->
+
+        <h2>this is for QuerySelector Example</h2>
+        <h2>this is for QuerySelector Example</h2>
+        <h2>this is for QuerySelector Example</h2>
+        <input type="password">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+        <!-- 
+        const myul = document.querySelector('ul') // store in variable
+        myul.querySelector('li')
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        const turnGreen = myul.querySelector('li') // store in variable
+        turnGreen.style.backgroundColor = 'green'
+        'green' // color change
+        turnGreen.style.padding = '10px'
+        '10px'
+        turnGreen.innerText = "five"
+        'five' // value change
+
+
+        document.getElementByClassName('list-item')
+        > HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item] // no foreach loop in Prototype
+            length: 0
+           >[[Prototype]]: HTMLCollection
+            item: ƒ item()
+            length: (...)
+            namedItem: ƒ namedItem()
+            constructor: ƒ HTMLCollection()
+            Symbol(Symbol.iterator): ƒ values()
+            Symbol(Symbol.toStringTag): "HTMLCollection"
+            get length: ƒ length()
+            [[Prototype]]: Object
+        const tempClassList = document.getElementByClassName('list-item')
+        
+    --- >CONVERT IN ARRAY
+        Array.from(tempClassList) // Array Converting Defination
+        const myConvertedArray = Array.from(tempClassList) //Store into variable
+        myConvertedArray.foreach((l) => {
+            l.style.color = 'orange'
+        }) // now its work 
+
+        const defaultZ = document.querySelectorAll('.mw-default-size')
+        defaultZ
+            NodeList(38)    // NodeList come using querySelectorAll
+        defaultZ.foreach(() => {
+            h.style.color = 'blue'
+            h.style.backgroundColor = 'green'
+            h.style.padding = '15px'...
+        })
+        -->
+    </div>
+</body>
+</html>
