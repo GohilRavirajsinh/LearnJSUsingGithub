@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage (langname) {
+        const li = document.createElement('li') // add li tag
+        li.innerHTML = `${langname}`  // add value into li tag
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python') // add language
+    addLanguage('c++')  // add language
+
+    function addOptiLanguage (langname) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    } 
+    addOptiLanguage('Java')
+
+    // Edit
+    const SecoundLang = document.querySelector('li:nth-child(2)')
+    // SecoundLang.innerHTML = 'ASP.net' // change value
+    const newLi = document.createElement('li')
+    newLi.textContent = 'ASP.net'
+    SecoundLang.replaceWith(newLi)  // change value
+
+    const FirstLang = document.querySelector('li:nth-child(2)')
+    FirstLang.outerHTML = '<li>TypeScripe</li>' // change value
+
+    // Remove/Delete
+    const LastLang = document.querySelector('li:nth-child(4)')
+    LastLang.remove() // remove
+</script>
+</html>
