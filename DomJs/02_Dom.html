@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent)                       // call class
+    // console.log(parent.children)              // call class childrens
+    // console.log(parent.children[0].innerHTML) // call direct children value
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }  // loop value print
+
+    parent.children[1].style.color = 'red'
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);  // Store ParentElements in One Variable
+    // console.log(dayOne.nextElementSibling);
+
+    // console.log("NODES: ", parent.childNodes); 
+    /* create node list NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+    0:text
+    1:div.day
+    2:text
+    3:div.day
+    4:text
+    5:div.day
+    6:text
+    7:div.day
+    8:text
+    length:9 */
+
+</script>
+
+</html>
